@@ -10,9 +10,11 @@ module.exports = {
       console.log(err);
     }
   },
+  //lean- cleans everything in your data to make it faster
+  // follower = true you can pass followers in sort, sort can have as many as you like
   getFeed: async (req, res) => {
     try {
-      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
+      const posts = await Post.find().sort({ createdAt: "desc" }).lean(); 
       res.render("feed.ejs", { posts: posts });
     } catch (err) {
       console.log(err);
