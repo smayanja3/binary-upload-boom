@@ -1,3 +1,8 @@
+## 📸 Project Preview
+
+![Boom Image](public/binary.png)
+
+
 # Install
 
 `npm install`
